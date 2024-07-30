@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Points Table</title>
+    <link rel="stylesheet" href="main.css">
+   
+</head>
+<body>
+  <div class="navbar">
+      <ul>
+          <li><a href="main.html" style="text-decoration: none; margin: left ;" >Home</a></li>
+          <li><a href="index.html"style="text-decoration: none;">Team</a></li>
+          <li><a href="points.html" style="text-decoration: none;">Points Table</a></li>
+          <li><a href="performance.html"style="text-decoration: none">performance</a></li>
+          <li><a href="gallery.html" style="text-decoration: none;">Gallery</a></li>
+      </ul>
+    <div class="container">
+        <h1>IPL performance</h1>
+        <label for="year-select">Select Year:</label>
+        <select id="year-select" onchange="fetchPointsTable()">
+            <script>
+                const select = document.getElementById('year-select');
+                for (let year = 2014; year <= 2024; year++) {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = year;
+                    select.appendChild(option);
+                }
+            </script>
+        </select>
+      </div>
+        <table id="points-table">
+            <thead>
+                <tr>
+                    <th>Sno</th>
+                    <th>Team</th>
+                    <th>Player</th>
+                    <th>Role</th>
+                    <th>Awarded</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <h4><b>ORANGE CAP: </b>Most Runs Scored in a Season.</h4>
+        <h4><strong>PURPLE CAP: Most Wickets Taken in a Season.</strong></h4>
+        <h4><strong>MVP: Most valuable Player.</strong></h4>
+        <h4><b>Fair-Play: Awarded for their best on-field conduct with points</b></h4>
+        <h4><b>Emerging Player: </b>It contains certain terms and conditions for Every Seasons Awarded to only young age players </h4>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
